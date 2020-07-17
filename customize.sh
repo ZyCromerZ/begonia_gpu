@@ -33,5 +33,9 @@ SKIPUNZIP=0
 #      set_perm dir owner group dirpermission context
 
 ## print word
+REPLACE="
+/system/vendor/lib/egl
+/system/vendor/lib64/egl
+"
 ui_print "Kanged latest gpu version from begonia-user-10-QP1A.190711.020-20.6.4 . . ."
 ui_print "enjoy . . ."
