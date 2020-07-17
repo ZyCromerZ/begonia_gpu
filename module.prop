@@ -1,7 +1,7 @@
 id=ZyC_Bego_Mali
 name=Mali GPU update/downgrade :V
-version=initial Version (begonia-user-10-QP1A.190711.020-20.6.4)
-versionCode=001
+version=initial Version
+versionCode=002
 author=ZyCromerZ
 description=Kanged latest gpu version from begonia-user-10-QP1A.190711.020-20.6.4 . . .
 minMagisk=1500
