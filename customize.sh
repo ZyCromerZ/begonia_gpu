@@ -37,5 +37,5 @@ REPLACE="
 /system/vendor/lib/egl
 /system/vendor/lib64/egl
 "
-ui_print "Kanged latest gpu version from begonia_V11.0.2.0.PGGIDXM_a01eac2431_9.0 . . ."
+ui_print "Kanged latest gpu version from miui_BEGONIAGlobal_V12.0.0.4.QGGMIXM_d02578ff0f_10.0.zip . . ."
 ui_print "enjoy . . ."
