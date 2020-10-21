@@ -35,7 +35,7 @@ TimeBuild="$(date +'%m-%d-%Y %T')"
 sed -i "s/00000/$TimeBuild/g" "$GetLibPath/META-INF/com/google/android/update-binary" 
 sed -i "s/11111/$ZipName/g" "$GetLibPath/META-INF/com/google/android/update-binary"
 
-GpuZipName="$GetLibPath/[Recovery]Mali.GPU.from.$ZipName"
+GpuZipName="$GetLibPath/[$(date +'%s')][Recovery]Mali.GPU.from.$ZipName"
 
 rm -rf compilled-gdrive
 zip -r9 "$GpuZipName" * -x ./.git ./README.md ./.gitignore ./*.zip ./getlib.sh ./run.sh
