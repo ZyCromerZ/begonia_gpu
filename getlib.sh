@@ -38,7 +38,7 @@ sed -i "s/11111/$VersionCode/g" "$GetLibPath/module.prop"
 sed -i "s/22222/$ZipName/g" "$GetLibPath/module.prop"
 sed -i "s/22222/$ZipName/g" "$GetLibPath/customize.sh"
 
-GpuZipName="$GetLibPath/[Magisk]Mali.GPU.from.$ZipName"
+GpuZipName="$GetLibPath/[$(date +'%s')][Magisk]Mali.GPU.from.$ZipName"
 
 rm -rf compilled-gdrive
 zip -r9 "$GpuZipName" * -x ./.git ./README.md ./.gitignore ./*.zip ./getlib.sh ./run.sh
