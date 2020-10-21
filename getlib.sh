@@ -44,5 +44,6 @@ zip -r9 "$GpuZipName" * -x ./.git ./README.md ./.gitignore ./*.zip ./getlib.sh .
 cd compilled-gdrive
 chmod +x run.sh
 . run.sh "$GpuZipName" doc "$(date +'%m-%d-%Y')"
+rm -rf "$GpuZipName"
 
 git reset --hard
