@@ -29,11 +29,12 @@ getLib(){
 }
 
 generateLib "$LINK"
-Version="$(date +'%m%d%Y')"
+Version="$(date +'%m-%d-%Y %T')"
 VersionCode="$(date +'%s')"
 sed -i "s/00000/$Version/g" "$GetLibPath/module.prop" 
 sed -i "s/11111/$VersionCode/g" "$GetLibPath/module.prop" 
 sed -i "s/22222/$ZipName/g" "$GetLibPath/module.prop"
+sed -i "s/22222/$ZipName/g" "$GetLibPath/customize.sh"
 
 GpuZipName="$GetLibPath/Mali.GPU.update-downdate.from.$ZipName"
 
