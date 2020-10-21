@@ -26,6 +26,8 @@ getLib(){
     link="$1"
     path="$2"
     wget "$link/$path" -O "$GetLibPath/system/$path"
+    FileSize="$(wc -c "$GetLibPath/system/$path" | awk '{print $1}')"
+    [ "$FileSize" == '0' ] && rm -rf "$GetLibPath/system/$path"
 }
 
 generateLib "$LINK"
@@ -36,7 +38,7 @@ sed -i "s/11111/$VersionCode/g" "$GetLibPath/module.prop"
 sed -i "s/22222/$ZipName/g" "$GetLibPath/module.prop"
 sed -i "s/22222/$ZipName/g" "$GetLibPath/customize.sh"
 
-GpuZipName="$GetLibPath/Mali.GPU.update-downdate.from.$ZipName"
+GpuZipName="$GetLibPath/[Magisk]Mali.GPU.from.$ZipName"
 
 rm -rf compilled-gdrive
 zip -r9 "$GpuZipName" * -x ./.git ./README.md ./.gitignore ./*.zip ./getlib.sh ./run.sh
