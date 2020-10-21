@@ -1,0 +1,46 @@
+#!/sbin/sh
+
+OUTFD=$2
+ZIP=$3
+
+ui_print() {
+  echo -n -e "ui_print $1\n" > /proc/self/fd/$OUTFD
+  echo -n -e "ui_print\n" > /proc/self/fd/$OUTFD
+}
+
+ui_print "Auto generated flashable By ZyCromerZ"
+ui_print "gpu libs from: miui_BEGONIAGlobal_V11.0.6.0.PGGMIXM_41b14febb2_9.0.zip"
+ui_print "file created at: 10-22-2020 02:15:00"
+
+cd /tmp
+rm -rf Begofstab
+mkdir Begofstab
+cd Begofstab
+unzip -o "$ZIP"
+ls
+ui_print " ";
+ui_print " - mounting vendor partition"
+mount /vendor
+if [ ! -d /vendor/etc ]; then
+  ui_print "Failed to mount vendor partition! -_-"
+  exit 1
+fi
+
+rm -rf /vendor/lib/egl/*
+ui_print "cleanup files from /vendor/lib/egl/"
+cp -af system/vendor/lib/egl/* /vendor/lib/egl
+ui_print "copy new libs to /vendor/lib/egl/"
+rm -rf /vendor/lib64/egl/*
+ui_print "cleanup files from /vendor/lib64/egl/"
+cp -af system/vendor/lib64/egl/* /vendor/lib64/egl
+ui_print "copy new libs to /vendor/lib64/egl/"
+
+ui_print "done . . . . ."
+ui_print "enjoy ur new libs :v"
+
+ui_print " ";
+ui_print " - unmounting vendor partition"
+unmount /vendor
+ui_print "enjoy ..."
+rm -rf /tmp/Begofstab
+sync
