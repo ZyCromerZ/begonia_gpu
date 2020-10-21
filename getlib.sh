@@ -40,9 +40,9 @@ GpuZipName="$GetLibPath/[Recovery]Mali.GPU.from.$ZipName"
 rm -rf compilled-gdrive
 zip -r9 "$GpuZipName" * -x ./.git ./README.md ./.gitignore ./*.zip ./getlib.sh ./run.sh
 
-# [[ ! -d compilled-gdrive ]] && git clone https://${GIT_SECRET}@github.com/ZyCromerZ/gdrive_uploader.git compilled-gdrive
-# cd compilled-gdrive
-# chmod +x run.sh
-# . run.sh "$GpuZipName" doc "$(date +'%m-%d-%Y')"
+[[ ! -d compilled-gdrive ]] && git clone https://${GIT_SECRET}@github.com/ZyCromerZ/gdrive_uploader.git compilled-gdrive
+cd compilled-gdrive
+chmod +x run.sh
+. run.sh "$GpuZipName" doc "$(date +'%m-%d-%Y')"
 
-# git reset --hard
+git reset --hard
