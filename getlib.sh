@@ -1,5 +1,7 @@
 #!/bin/bash
-[[ -z "$LINK" ]] && LINK="https://raw.githubusercontent.com/ZyCromerZ/redmi_begonia_dump/$branch"
+[[ -z "$FROM" ]] && FROM="https://raw.githubusercontent.com/ZyCromerZ/redmi_begonia_dump"
+
+LINK="$FROM/$branch"
 
 GetLibPath="$(pwd)"
 
