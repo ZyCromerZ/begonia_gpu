@@ -16,9 +16,9 @@ MakeGpuModule miui_BEGONIAIDGlobal_V11.0.2.0.PGGIDXM_56ff332bed_9.0.zip begonia-
 
 MakeGpuModule miui_BEGONIA_20.9.10_c84222bc2b_10.0.zip begonia-user-10-QP1A.190711.020-20.9.10-release-keys
 
-MakeGpuModule miui_BEGONIAGlobal_V12.0.3.0.QGGMIXM_4bd96ae3c3_10.0.zip begonia_global_images_V12.0.3.0.QGGMIXM_20200902.0000.00_10.0_global_abde420a62.tgz
+MakeGpuModule begonia_global_images_V12.0.3.0.QGGMIXM_20200902.0000.00_10.0_global_abde420a62.tgz begonia-user-10-QP1A.190711.020-V12.0.3.0.QGGMIXM-release-keys
 
-MakeGpuModule miui_BEGONIAIDGlobal_V12.0.1.0.QGGIDXM_d0e8262216_10.0.zip  begonia_id_global_images_V12.0.1.0.QGGIDXM_20200729.0000.00_10.0_global_b9571b29f9.tgz
+MakeGpuModule begonia_id_global_images_V12.0.1.0.QGGIDXM_20200729.0000.00_10.0_global_b9571b29f9.tgz begonia-user-10-QP1A.190711.020-V12.0.1.0.QGGIDXM-release-keys
 
 MakeGpuModule miui_BEGONIARUGlobal_V12.0.3.0.QGGRUXM_1725d98751_10.0.zip begonia-user-10-QP1A.190711.020-V12.0.3.0.QGGRUXM-release-keys
 
