@@ -33,15 +33,19 @@ fi
 if [ ! -d /data/zyc-backup-lib ];then
   ui_print " ";
   ui_print " - create bakcup folder for /vendor/lib/egl/"
+  ui_print " "
+  ui_print " - copy all files inside /vendor/lib/egl to backup folder"
   mkdir /data/zyc-backup-lib
+  cp -af /vendor/lib/egl/* /data/zyc-backup-lib
 fi
 if [ ! -d /data/zyc-backup-lib64 ];then
   ui_print " ";
   ui_print " - create bakcup folder for /vendor/lib64/egl/"
+  ui_print " "
+  ui_print " - copy all files inside /vendor/lib64/egl to backup folder"
   mkdir /data/zyc-backup-lib64
+  cp -af /vendor/lib64/egl/* /data/zyc-backup-lib64
 fi
-cp -af /vendor/lib/egl/* /data/zyc-backup-lib
-cp -af /vendor/lib64/egl/* /data/zyc-backup-lib64
 
 rm -rf /vendor/lib/egl/*
 ui_print " ";
