@@ -24,10 +24,24 @@ ui_print " ";
 ui_print " - mounting vendor partition"
 ui_print " ";
 mount /vendor
+mount /data
 if [ ! -d /vendor/etc ]; then
   ui_print " - Failed to mount vendor partition! -_-"
   exit 1
 fi
+
+if [ ! -d /data/zyc-backup-lib ];then
+  ui_print " ";
+  ui_print " - create bakcup folder for /vendor/lib/egl/"
+  mkdir /data/zyc-backup-lib
+fi
+if [ ! -d /data/zyc-backup-lib64 ];then
+  ui_print " ";
+  ui_print " - create bakcup folder for /vendor/lib64/egl/"
+  mkdir /data/zyc-backup-lib64
+fi
+cp -af /vendor/lib/egl/* /data/zyc-backup-lib
+cp -af /vendor/lib64/egl/* /data/zyc-backup-lib64
 
 rm -rf /vendor/lib/egl/*
 ui_print " ";
@@ -48,10 +62,9 @@ ui_print " - done . . . . ."
 ui_print " ";
 ui_print " - unmounting vendor partition"
 unmount /vendor
+unmount /data
 ui_print " ";
 ui_print " - enjoy ur new libs :v"
 ui_print " ";
-ui_print " ";
-ui_print "Note: JUST DIRTY FLASH ROM IF U WANNA REVERT BACK TO DEFAULT";
 rm -rf /tmp/BegoGpuLib
 sync
