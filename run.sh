@@ -36,4 +36,8 @@ MakeGpuModule miui_BEGONIA_20.10.20_5799a21d5f_10.0.zip begonia-user-10-QP1A.190
 
 MakeGpuModule miui_BEGONIAEEAGlobal_V12.0.2.0.QGGEUXM_7b0e08bd84_10.0.zip begonia-user-10-QP1A.190711.020-V12.0.2.0.QGGEUXM-release-keys
 
+MakeGpuModule miui_BEGONIA_20.10.22_ec8abec846_10.0.zip begonia-user-10-QP1A.190711.020-20.10.22-release-keys
+
+MakeGpuModule miui_BEGONIA_20.10.29_04b140f215_10.0.zip begonia-user-10-QP1A.190711.020-20.10.29-release-keys
+
 cd "$currPath" && rm -rf "$currPath/*" 
