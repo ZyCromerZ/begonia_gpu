@@ -10,6 +10,6 @@ MakeGpuModule(){
     cd $currPath
 }
 
-MakeGpuModule miui_BEGONIA_20.11.18_87476c1dbd_10.0.zip begonia-user-10-QP1A.190711.020-20.11.18-release-keys
+MakeGpuModule miui_BEGONIA_21.1.22_d28f4ee734_11.0.zip begonia-user-11-RP1A.200720.011-21.1.22-release-keys
 
 cd "$currPath" && rm -rf "$currPath/*" 

@@ -17,10 +17,12 @@ generateLib(){
     getLib "$1" "vendor/lib/egl/egl.cfg"
     getLib "$1" "vendor/lib/egl/libGLES_mali.so"
     getLib "$1" "vendor/lib/egl/libGLES_meow.so"
+    getLib "$1" "vendor/lib/egl/libMEOW_gift.so"
     getLib "$1" "vendor/lib/egl/libMEOW_trace.so"
     getLib "$1" "vendor/lib64/egl/egl.cfg"
     getLib "$1" "vendor/lib64/egl/libGLES_mali.so"
     getLib "$1" "vendor/lib64/egl/libGLES_meow.so"
+    getLib "$1" "vendor/lib64/egl/libMEOW_gift.so"
     getLib "$1" "vendor/lib64/egl/libMEOW_trace.so"
 }
 
