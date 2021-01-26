@@ -1,0 +1,18 @@
+version: 2.1
+jobs:
+  compile:
+   docker:
+      - image: fadlyas/kernel_dockerfile:latest
+   steps:
+      - run:
+          command: |
+            branch=$CIRCLE_BRANCH
+            git clone https://$githubKey@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git -b $branch gpu_modul_maker --depth=1
+            cd gpu_modul_maker
+            chmod +x run.sh && ./run.sh
+          no_output_timeout : 5h
+workflows:
+  version: 2.1
+  cooking:
+    jobs:
+      - compile
