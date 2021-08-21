@@ -14,16 +14,11 @@ generateLib(){
     [ ! -d $GetLibPath/system/vendor/lib64 ] && mkdir $GetLibPath/system/vendor/lib64
     [ ! -d $GetLibPath/system/vendor/lib/egl ] && mkdir $GetLibPath/system/vendor/lib/egl
     [ ! -d $GetLibPath/system/vendor/lib64/egl ] && mkdir $GetLibPath/system/vendor/lib64/egl
-    getLib "$1" "vendor/lib/egl/egl.cfg"
-    getLib "$1" "vendor/lib/egl/libGLES_mali.so"
-    getLib "$1" "vendor/lib/egl/libGLES_meow.so"
-    getLib "$1" "vendor/lib/egl/libMEOW_gift.so"
-    getLib "$1" "vendor/lib/egl/libMEOW_trace.so"
-    getLib "$1" "vendor/lib64/egl/egl.cfg"
-    getLib "$1" "vendor/lib64/egl/libGLES_mali.so"
-    getLib "$1" "vendor/lib64/egl/libGLES_meow.so"
-    getLib "$1" "vendor/lib64/egl/libMEOW_gift.so"
-    getLib "$1" "vendor/lib64/egl/libMEOW_trace.so"
+    for ListFiles in egl.cfg libGLES_mali.so libGLES_meow.so libMEOW_gift.so libMEOW_trace.so
+    do
+        getLib "$1" "vendor/lib/egl/$ListFiles"
+        getLib "$1" "vendor/lib64/egl/$ListFiles"
+    done
 }
 
 getLib(){
@@ -47,7 +42,7 @@ GpuZipName="$GetLibPath/[$(date +'%s')][Magisk]Mali.GPU.from.$ZipName"
 rm -rf compilled-gdrive
 zip -r9 "$GpuZipName" * -x ./.git ./README.md ./.gitignore ./*.zip ./getlib.sh ./run.sh
 
-[[ ! -d compilled-gdrive ]] && git clone https://${GIT_SECRET}@github.com/ZyCromerZ/gdrive_uploader.git compilled-gdrive
+[[ ! -d compilled-gdrive ]] && git clone https://${GIT_SECRET}@github.com/ZyCromerZ/uploader-kernel-private.git compilled-gdrive --depth=1
 cd compilled-gdrive
 chmod +x run.sh
 . run.sh "$GpuZipName" doc "$(date +'%m-%d-%Y')"
